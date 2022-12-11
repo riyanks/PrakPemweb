@@ -1,4 +1,5 @@
 Prak Pemweb
 # Riyan Khoiri Siregar
-# Kelas RD
+# Kelas RA
 # 120140212
+# Jadwal RD
