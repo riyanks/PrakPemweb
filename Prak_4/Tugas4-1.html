@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    let outputHTML = "";
+
+    window.onload = ()=>{
+        cek(21)
+    }
+
+function cek (x) {
+    const body = document.getElementById("container");
+    if (x<=0 || x>=20){
+        outputHTML += "Masukkan angka sesuai range 1 s/d 20"
+    }
+
+    else {
+
+        if (x%2 == 0){
+            let result = 1
+            for (i = 1; i<=x/2; i++){
+                outputHTML += i;
+                if (i<x/2){
+                    outputHTML += 'x';
+                }
+                result*=i
+            }
+            outputHTML += ' = ' + result;
+
+        }
+        else {
+            let limit = x*10
+            let r = 1
+            let counter = 0
+
+            while (r<=limit){
+                let p = r
+                outputHTML += r + " ";
+                r += counter
+                counter = p
+
+            }
+        }
+    }
+    body.innerHTML = outputHTML;
+}
+
+
+</script>
+<body>
+    <h1 id= "container"></h1>
+    
+</body>
+</html>
